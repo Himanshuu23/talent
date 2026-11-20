@@ -12,7 +12,7 @@ export default function Home() {
       <HowItWorks />
       <footer className="border-t border-white/5 bg-black px-6 py-10 text-center text-sm text-zinc-500">
         <p className="font-medium text-zinc-300">
-          Talent<span className="text-amber-400">.live</span>
+          Talent<span className="text-zinc-500">.live</span>
         </p>
         <p className="mt-2">Real-time talent shows with live video, voting, cheers and tips.</p>
       </footer>

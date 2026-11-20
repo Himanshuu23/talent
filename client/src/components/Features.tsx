@@ -47,7 +47,7 @@ export default function Features() {
   return (
     <section id="features" className="scroll-mt-16 bg-zinc-950 px-5 py-24 text-white sm:px-8">
       <div className="mx-auto max-w-7xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-amber-400">Features</p>
+        <p className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">Features</p>
         <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
           Everything a live talent night needs, in one room.
         </h2>
@@ -55,9 +55,9 @@ export default function Features() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className="rounded-2xl border border-white/10 bg-zinc-900/50 p-6 transition hover:border-amber-400/30 hover:bg-zinc-900"
+              className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 transition hover:border-white/15 hover:bg-white/[0.04]"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300">
+              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white/[0.06] text-zinc-300">
                 <feature.icon className="h-5 w-5" />
               </span>
               <h3 className="mt-4 text-base font-semibold">{feature.title}</h3>

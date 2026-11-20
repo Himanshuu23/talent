@@ -40,15 +40,15 @@ export default function Roles() {
   return (
     <section id="roles" className="scroll-mt-16 border-t border-white/5 bg-zinc-950 px-5 py-24 text-white sm:px-8">
       <div className="mx-auto max-w-7xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-amber-400">Roles</p>
+        <p className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">Roles</p>
         <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
           Three roles, each with exactly the controls they need.
         </h2>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {roles.map((role) => (
-            <article key={role.name} className="rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-950 p-7">
+            <article key={role.name} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-7">
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-rose-500 text-zinc-950">
+                <span className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-zinc-200">
                   <role.icon className="h-5 w-5" />
                 </span>
                 <div>
@@ -59,7 +59,7 @@ export default function Roles() {
               <ul className="mt-6 space-y-3 text-sm text-zinc-300">
                 {role.points.map((point) => (
                   <li key={point} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-500" />
                     {point}
                   </li>
                 ))}

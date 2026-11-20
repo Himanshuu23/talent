@@ -15,7 +15,16 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	cfg := config.Load()
 
-	redisClient, err := redis.NewClient(cfg.RedisURL)
+	var redisClient *redis.Client
+	var err error
+	for i := 1; i <= 10; i++ {
+		redisClient, err = redis.NewClient(cfg.RedisURL)
+		if err == nil {
+			break
+		}
+		log.Printf("Redis not ready (attempt %d/10): %v", i, err)
+		time.Sleep(3 * time.Second)
+	}
 	if err != nil {
 		log.Fatal("Failed to connect to Redis:", err)
 	}
