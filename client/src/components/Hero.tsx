@@ -20,7 +20,7 @@ function Equalizer() {
       {bars.map((_, i) => (
         <span
           key={i}
-          className="eq-bar flex-1 rounded-t-sm bg-gradient-to-t from-white/55 to-white/0"
+          className="eq-bar flex-1 rounded-t-full bg-gradient-to-t from-amber-400/80 to-rose-500/20"
           style={{
             height: `${35 + ((i * 37) % 65)}%`,
             animationDelay: `${(i % 13) * 0.11}s`,
@@ -56,7 +56,7 @@ export default function HeroSection() {
   return (
     <div className="relative isolate overflow-hidden bg-zinc-950">
       {/* stage lighting */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.06),_transparent_52%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(251,191,36,0.16),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(244,63,94,0.14),_transparent_45%)]" />
       <div className="spotlight absolute inset-x-0 top-0 -z-10 h-[34rem] opacity-80" />
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center opacity-[0.12] blur-sm"
@@ -68,12 +68,12 @@ export default function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16">
         <div className="text-white">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-zinc-300">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#c5d1c0]" /> Real-time talent shows in your browser
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-amber-200">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400" /> Real-time talent shows in your browser
           </p>
           <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
             Take the stage.{" "}
-            <span className="text-zinc-400">
+            <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-rose-400 bg-clip-text text-transparent">
               The crowd decides.
             </span>
           </h1>
@@ -111,7 +111,7 @@ export default function HeroSection() {
             ].map((item) => (
               <div key={item.t}>
                 <dt className="flex items-center gap-2 font-medium text-white">
-                  <span className="text-zinc-400">{item.icon}</span> {item.t}
+                  <span className="text-amber-300">{item.icon}</span> {item.t}
                 </dt>
                 <dd className="mt-1 text-xs leading-5 text-zinc-400">{item.d}</dd>
               </div>

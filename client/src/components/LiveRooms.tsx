@@ -36,10 +36,10 @@ export default function LiveRooms({ onJoin }: { onJoin: (code: string, role: Joi
   const typedCode = /^[a-z0-9]{4,8}$/.test(q) && !rooms.some((r) => r.roomCode === q);
 
   return (
-    <div className="rounded-xl border border-white/[0.08] bg-[#121214] p-5">
+    <div className="rounded-3xl border border-white/10 bg-zinc-900/70 p-5 shadow-2xl shadow-black/40 backdrop-blur">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-zinc-400">
-          <Radio className="h-3.5 w-3.5" /> Live now
+        <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-amber-300">
+          <Radio className="h-4 w-4" /> Live now
         </h2>
         <span className="text-xs text-zinc-500">{connected ? `${rooms.length} room${rooms.length === 1 ? "" : "s"}` : "connecting…"}</span>
       </div>
@@ -51,7 +51,7 @@ export default function LiveRooms({ onJoin }: { onJoin: (code: string, role: Joi
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search by room name, category or code"
-          className="h-11 w-full rounded-lg border border-white/10 bg-black/40 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none focus:border-white/30 focus:ring-2 focus:ring-white/10"
+          className="h-12 w-full rounded-2xl border border-white/15 bg-black/40 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none focus:border-amber-400/70 focus:ring-2 focus:ring-amber-400/30"
         />
       </label>
 

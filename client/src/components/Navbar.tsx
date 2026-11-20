@@ -25,11 +25,11 @@ export default function Navbar() {
     <header className="relative z-30 mx-auto w-full max-w-7xl px-5 py-4 text-white sm:px-8">
       <nav className="flex items-center justify-between" aria-label="Main">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-zinc-100 text-sm font-semibold text-zinc-950">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-rose-500 text-lg font-black text-zinc-950">
             T
           </span>
-          <span className="text-lg font-semibold tracking-tight">
-            Talent<span className="text-zinc-500">.live</span>
+          <span className="text-xl font-semibold tracking-tight">
+            Talent<span className="text-amber-400">.live</span>
           </span>
         </Link>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-2.5 lg:flex">
           <span
             title={connected ? "Connected to the live server" : "Reconnecting to the live server…"}
-            className={`h-2 w-2 rounded-full ${connected ? "bg-[#c5d1c0] shadow-[0_0_0_3px_rgba(197,209,192,0.2)]" : "animate-pulse bg-red-400"}`}
+            className={`h-2.5 w-2.5 rounded-full ${connected ? "bg-emerald-400" : "animate-pulse bg-red-400"}`}
           />
           {room ? (
             <Link href="/room" className={primaryBtn}>
@@ -71,7 +71,7 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="mt-3 flex flex-col gap-3 rounded-xl border border-white/10 bg-[#101012]/95 p-4 lg:hidden">
+        <div className="mt-3 flex flex-col gap-3 rounded-2xl border border-white/10 bg-zinc-950/95 p-4 lg:hidden">
           {room ? (
             <Link href="/room" className={primaryBtn}>
               Back to your room

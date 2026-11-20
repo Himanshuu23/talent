@@ -8,7 +8,7 @@ export default function Login() {
   if (session) {
     return (
       <button
-        className="rounded-lg border border-white/10 bg-transparent px-3.5 py-2 text-sm text-zinc-300 hover:bg-white/[0.06] hover:text-white"
+        className="rounded-full bg-zinc-800 px-4 py-2 text-sm text-white hover:bg-zinc-700"
         onClick={() => signOut()}
       >
         Logout
@@ -22,7 +22,7 @@ export default function Login() {
 
   return (
     <button
-      className="rounded-lg bg-zinc-100 px-3.5 py-2 text-sm font-medium text-zinc-950 hover:bg-white"
+      className="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-zinc-200"
       onClick={() => signIn("google")}
     >
       Google login
