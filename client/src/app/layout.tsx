@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Talent.live — host a live talent show",
+  title: "Talent.live",
   description:
-    "Create rooms, put performers on a live WebRTC stage, and let viewers vote, cheer, and donate in real time.",
+    "Create a room, line up performers, and let your audience vote, cheer, and tip in real time.",
 };
 
 export default function RootLayout({

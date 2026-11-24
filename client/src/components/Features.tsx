@@ -1,3 +1,4 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clapperboard, DoorOpen, Gavel, ListOrdered, MessageSquare, ShieldCheck, Timer, Wallet } from "lucide-react";
 
 const features = [
@@ -9,7 +10,7 @@ const features = [
   {
     icon: Clapperboard,
     title: "Live stage video",
-    copy: "Hosts and performers share a WebRTC video mesh. The act on stage is what the audience sees and hears.",
+    copy: "Hosts and performers go on camera. The act on stage is what the audience sees and hears.",
   },
   {
     icon: ListOrdered,
@@ -53,21 +54,22 @@ export default function Features() {
         </h2>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
-            <article
+            <Card
               key={feature.title}
-              className="rounded-2xl border border-white/10 bg-zinc-900/50 p-6 transition hover:border-amber-400/30 hover:bg-zinc-900"
+              className="border-white/10 bg-zinc-900/50 shadow-none transition hover:border-amber-400/30 hover:bg-zinc-900"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300">
-                <feature.icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-4 text-base font-semibold">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-400">{feature.copy}</p>
-            </article>
+              <CardHeader>
+                <span className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/10 text-amber-300">
+                  <feature.icon className="h-5 w-5" />
+                </span>
+                <CardTitle className="text-base text-white">{feature.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-6 text-zinc-400">{feature.copy}</CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
-        <p className="mt-6 text-xs text-zinc-500">
-          Tips are tracked inside the room. Real payment processing is not connected in this version, so no money moves.
-        </p>
       </div>
     </section>
   );

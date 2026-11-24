@@ -6,7 +6,6 @@ import Navbar from "./Navbar";
 import CreateDialog from "./CreateDialog";
 import JoinDialog from "./JoinDialog";
 import LiveRooms from "./LiveRooms";
-import Showcase from "./Showcase";
 import { useSocket } from "@/context/SocketContext";
 import { ghostBtn, primaryBtn } from "@/lib/ui";
 
@@ -68,9 +67,6 @@ export default function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16">
         <div className="text-white">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-amber-200">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400" /> Real-time talent shows in your browser
-          </p>
           <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
             Take the stage.{" "}
             <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-rose-400 bg-clip-text text-transparent">
@@ -79,7 +75,7 @@ export default function HeroSection() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
             Host a live talent show with a performer queue, a timed stage and video. Your audience votes 1–10,
-            cheers, and tips — all live, no installs.
+            cheers, and tips!
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -102,21 +98,6 @@ export default function HeroSection() {
               {error} <span className="ml-2 text-red-300/70">Dismiss</span>
             </button>
           )}
-
-          <dl className="mt-10 grid max-w-xl grid-cols-3 gap-4 text-sm">
-            {[
-              { icon: <Video className="h-4 w-4" />, t: "Live video", d: "WebRTC stage for hosts & performers" },
-              { icon: <Vote className="h-4 w-4" />, t: "Real votes", d: "1–10 audience score + host score" },
-              { icon: <Wallet className="h-4 w-4" />, t: "Tips", d: "Audience tips per performer" },
-            ].map((item) => (
-              <div key={item.t}>
-                <dt className="flex items-center gap-2 font-medium text-white">
-                  <span className="text-amber-300">{item.icon}</span> {item.t}
-                </dt>
-                <dd className="mt-1 text-xs leading-5 text-zinc-400">{item.d}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
         <div id="live" className="scroll-mt-24">
@@ -124,7 +105,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <Showcase />
       <Equalizer />
     </div>
   );

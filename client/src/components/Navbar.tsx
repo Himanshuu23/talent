@@ -18,7 +18,7 @@ const LINKS = [
 ];
 
 export default function Navbar() {
-  const { connected, room } = useSocket();
+  const { room } = useSocket();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -42,10 +42,6 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2.5 lg:flex">
-          <span
-            title={connected ? "Connected to the live server" : "Reconnecting to the live server…"}
-            className={`h-2.5 w-2.5 rounded-full ${connected ? "bg-emerald-400" : "animate-pulse bg-red-400"}`}
-          />
           {room ? (
             <Link href="/room" className={primaryBtn}>
               Back to your room

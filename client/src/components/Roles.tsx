@@ -1,3 +1,4 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, Mic, Crown } from "lucide-react";
 
 const roles = [
@@ -46,25 +47,27 @@ export default function Roles() {
         </h2>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {roles.map((role) => (
-            <article key={role.name} className="rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-950 p-7">
-              <div className="flex items-center gap-3">
+            <Card key={role.name} className="rounded-3xl border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-950 shadow-none">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 p-7 pb-0">
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-rose-500 text-zinc-950">
                   <role.icon className="h-5 w-5" />
                 </span>
-                <div>
-                  <h3 className="text-lg font-semibold">{role.name}</h3>
-                  <p className="text-xs text-zinc-500">{role.tag}</p>
+                <div className="space-y-1">
+                  <CardTitle className="text-lg text-white">{role.name}</CardTitle>
+                  <CardDescription className="text-xs text-zinc-500">{role.tag}</CardDescription>
                 </div>
-              </div>
-              <ul className="mt-6 space-y-3 text-sm text-zinc-300">
-                {role.points.map((point) => (
-                  <li key={point} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </article>
+              </CardHeader>
+              <CardContent className="p-7 pt-6">
+                <ul className="space-y-3 text-sm text-zinc-300">
+                  {role.points.map((point) => (
+                    <li key={point} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

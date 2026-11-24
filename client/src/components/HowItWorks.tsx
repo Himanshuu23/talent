@@ -1,3 +1,5 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const steps = [
   {
     n: "01",
@@ -31,10 +33,16 @@ export default function HowItWorks() {
         </h2>
         <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <li key={step.n} className="rounded-2xl border border-white/10 p-6">
-              <p className="font-mono text-sm text-amber-400">{step.n}</p>
-              <h3 className="mt-3 text-lg font-semibold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-400">{step.copy}</p>
+            <li key={step.n}>
+              <Card className="h-full border-white/10 bg-transparent shadow-none">
+                <CardHeader>
+                  <p className="font-mono text-sm text-amber-400">{step.n}</p>
+                  <CardTitle className="pt-1 text-lg text-white">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-6 text-zinc-400">{step.copy}</CardDescription>
+                </CardContent>
+              </Card>
             </li>
           ))}
         </ol>

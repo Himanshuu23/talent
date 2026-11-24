@@ -114,7 +114,7 @@ export function TipDialog({
         <DialogHeader>
           <DialogTitle>Tip {performerName || "the performer"}</DialogTitle>
           <DialogDescription className="text-zinc-400">
-            Tips are recorded in the room and shown on stage. Demo mode: no real payment is processed.
+            Your tip is shown on stage for everyone to see.
           </DialogDescription>
         </DialogHeader>
         <div className="grid grid-cols-3 gap-2">
